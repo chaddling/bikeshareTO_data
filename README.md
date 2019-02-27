@@ -1,6 +1,6 @@
 # Bike Share Toronto Data
 
-This repository contains the cleaned/augmented datasets of Bike Share Toronto trip events from 2016 (partial) to 2017, as well as Python scripts used to perform the data engineering. Each start/end station pair is additionally assigned their latitude/longitude coordinates and the distance of a trip between the pair.
+This repository contains the cleaned/augmented datasets of Bike Share Toronto trip events from 2016 (partial) to 2017, as well as Python scripts used to perform the data engineering. Each start/end station pair is additionally assigned their latitude/longitude coordinates and the distance of a trip between the pair. A few datasets are located in [this folder](https://github.com/chaddling/bikeshareTO_data/tree/master/sample) and I will try to provide a link to download individual datasets later (TBD).
 
 Inspired by the [UCI Machine Learning Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset), I also generate hourly usage datasets containing local weather information. (TBD)
 
