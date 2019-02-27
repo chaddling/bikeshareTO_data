@@ -19,12 +19,12 @@ Comments on the datasets
 ===================================
 Each dataset contains important columns such as:
 
-- "``trip_duration``": duration of travel, including timestamp "``trip_start_time``". We drop the "`trip_start_time`" timestamp and add a column `wkday` for the day of the week.
+- ``trip_duration``: duration of travel, including timestamp ``trip_start_time``. I dropped the `trip_start_time` timestamp and add a column `wkday` for the day of the week.
 
-- "``from_station_name``", "``to_station_name``" and their IDs "``from_station_id``", "``to_station_id``", which can be used to look up their corresponding latitude and longitude coordinates in [Station Information](https://tor.publicbikesystem.net/ube/gbfs/v1/en/station_information). The IDs are missing in some datasets.
+- ``from_station_name``, ``to_station_name`` and their IDs ``from_station_id``, ``to_station_id``, which can be used to look up their corresponding latitude and longitude coordinates in [Station Information](https://tor.publicbikesystem.net/ube/gbfs/v1/en/station_information). The IDs are missing in some datasets.
 
 - ``user_type``: whether the user is a Bike Share Toronto member or not.
-- See [readme.txt](http://github.com/bikehareTO_data/sample/readme.txt) for more information.
+- See [readme.txt](https://github.com/chaddling/bikeshareTO_data/blob/master/sample/readme.txt) for more information.
 
 Cleaning the data
 -----------------
