@@ -1,3 +1,10 @@
+###############################################################################
+# Some functions used to generate name strings from an intersection / station
+# name 
+#
+# Author: Chad Gu
+# Date: 2017-02-25
+###############################################################################
 from data_exceptions import street_name_spelling, location_rename, missing_coordinates
 
 # return the "name" found in json file

@@ -1,3 +1,14 @@
+###############################################################################
+# usage: bikeshare_data_script.py input_filename output_filename
+# input_filename = .csv file containing events from a raw quarter-year dataset
+# output_filename = .csv file of output
+#
+# cleaning date/time column information, add latitude/longitude coordinate and
+# distance information
+#
+# Author: Chad Gu
+# Date: 2017-02-25
+###############################################################################
 import json
 from dateutil.parser import parse
 import pandas as pd
@@ -128,4 +139,4 @@ for i in data.index:
     data.at[i, 'trip_distance'] = req.json()['routes'][0]['legs'][0]['distance']
 
 # save the output
-data.to_csv(output_filename, index=False)
+data.to_csv('cleaned/'+output_filename, index=False)
