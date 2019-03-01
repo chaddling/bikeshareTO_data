@@ -18,9 +18,9 @@ The data tables that contain all individual trip events (e.g. q1_2017_events_cle
 14. to_lon (float) : longitude of the station
 15. user_type (str) : if the user was a member, = Member or Casual
 
-B. Hourly events datasets:
-==========================
-We extract historical weather data from Environment Canada and calculate hourly event totals using the individual trip events tables to form new tables which contain hourly bike share usage information:
+B. Hourly-usage datasets:
+=========================
+We extract historical weather data from Environment Canada and calculate hourly event totals (e.g. 2017_hourly.csv) using the individual trip events tables to form new tables which contain hourly bike share usage information:
 
 1. season (int) : Q1 (Jan-March)/Winter = 1, Q2 (Apr - June)/Spring = 2, Q3 (July - Sept)/Summer = 3, Q4 (Oct - Dec)/Winter = 4
 2. wkday (int) : the day of the week, Monday = 0, Sunday = 6 
