@@ -39,7 +39,7 @@ conditions_rating = {
     'Heavy Snow Showers' : 4, 'Moderate Freezing Rain' : 4
 }
 
-year = 2017
+year = 2016
 weather_filename = 'weather/{}_weather_joined.csv'.format(year)
 weather = pd.read_csv(weather_filename)
 hrs_in_year = len(weather)
@@ -98,6 +98,7 @@ for i in weather.index:
         hourlyDF.at[i, 'holiday'] = 0
 
     hourlyDF.at[i, 'hr'] = int(hourlyDF.at[i, 'hr'].split(':')[0])
+
     hourlyDF.at[i, 'adjtemp'] = calculateAdjTemp(weather.Temp[i], weather.DewPointTemp[i], weather.WindSpd[i])
 
     # assign previous recorded weather condition
@@ -131,6 +132,21 @@ hourlyDF['adjtemp'] = round((hourlyDF['adjtemp'] - hourlyDF.adjtemp.min()) / Dt,
 # normalize by max
 hourlyDF['hum'] /= 100
 hourlyDF['windspd'] = round(hourlyDF['windspd']/weather.WindSpd.max(), 4)
+
+# a few rows in the weather data are just empty,
+# they're filled in by the last observed values
+for i in hourlyDF.index:
+    if np.isnan(hourlyDF.temp[i]):
+        hourlyDF.at[i, 'temp'] = hourlyDF.temp[i-1]
+
+    if np.isnan(hourlyDF.adjtemp[i]):
+        hourlyDF.at[i, 'adjtemp'] = hourlyDF.adjtemp[i-1]
+
+    if np.isnan(hourlyDF.windspd[i]):
+        hourlyDF.at[i, 'windspd'] = hourlyDF.windspd[i-1]
+
+    if np.isnan(hourlyDF.hum[i]):
+        hourlyDF.at[i, 'hum'] = hourlyDF.hum[i-1]
 
 # save file
 hourlyDF.to_csv('cleaned/{}_hourly.csv'.format(year), index=False)
