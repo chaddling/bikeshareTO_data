@@ -4,7 +4,7 @@ This repository contains the cleaned/augmented datasets of Bike Share Toronto tr
 
 Inspired by the [UCI Machine Learning Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset), I also generate hourly usage datasets containing local weather information. Cleaned datasets are located in [this folder](https://github.com/chaddling/bikeshareTO_data/tree/master/cleaned).
 
-Go here for a clustering analysis of the data (TBD). 
+Go [here](https://github.com/chaddling/bikeshareTO_analysis) for an analysis of the data . 
 
 Data sources
 ------------
